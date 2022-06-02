@@ -7,8 +7,9 @@
 
 // custom includes
 #include "defs.h"
-#include "instruction_handler.h"
 #include "msgQ.h"
+#include "instruction_handler.h"
+#include "uart_handler.h"
 
 void action(ushort msg);
 void read_sensor();
@@ -16,7 +17,8 @@ void set_coordinates();
 void set_parameters();
 void set_feedback();
 int get_sensor();
-int get_checkpoint(checkpoint_t *cp);
+void get_checkpoint(checkpoint_t *cp);
+void get_parameters(parameters_t *params);
 void wait_for_q(message_queue_t *q, int period, int *retries);
 
 /**
@@ -75,7 +77,7 @@ void action(ushort msg)
 }
 
 /**
- * @brief
+ * @brief Calls UART functionality to read a port when the sensor ID is set
  *
  */
 void read_sensor()
@@ -87,6 +89,10 @@ void read_sensor()
 
     wait_for_q(&rcvq, period, &retries);
     msg = readMsg(&rcvq);
+    wait(&m_sensor);
+    sensor.id = msg;
+    sensor.set = 1;
+    signal(&m_sensor);
 }
 
 /**
@@ -95,10 +101,10 @@ void read_sensor()
  */
 void set_coordinates()
 {
-    // TODO change this variables for global variables
-    checkpoint_t cp;
-
+    wait(&m_checkpoint);
     get_checkpoint(&cp);
+    cp.set = 1;
+    signal(&m_checkpoint);
 }
 
 /**
@@ -107,25 +113,42 @@ void set_coordinates()
  */
 void set_parameters()
 {
-    int awake;
+    wait(&m_params);
+    get_parameters(&params);    
+    params.set = 1;
+    signal(&m_params);
+}
+
+/**
+ * @brief Set the feedback object
+ *
+ */
+void set_feedback()
+{
+    ushort msg;
     int period = 10;
     int retries = 10;
-    ushort angular_speed;
-    ushort linear_speed;
-    ushort time;
+
+    // TODO change this variables for global variables
+    int sensor;
+    checkpoint_t cp;
 
     wait_for_q(&rcvq, period, &retries);
-    angular_speed = readMsg(&rcvq);
+    msg = readMsg(&rcvq);
 
-    retries = 10;
+    switch (msg)
+    {
+    case 0x00:
+        sensor = get_sensor();
+        break;
 
-    wait_for_q(&rcvq, period, &retries);
-    linear_speed = readMsg(&rcvq);
+    case 0x01:
+        get_checkpoint(&cp);
+        break;
 
-    retries = 10;
-
-    wait_for_q(&rcvq, period, &retries);
-    time = readMsg(&rcvq);
+    default:
+        break;
+    }
 }
 
 /**
@@ -138,19 +161,31 @@ int get_sensor()
     int awake;
     int period = 10;
     int retries = 10;
+    int id, value, set;
     ushort msg;
 
     wait_for_q(&rcvq, period, &retries);
     msg = readMsg(&rcvq);
+    id = msg;
+
+    wait_for_q(&rcvq, period, &retries);
+    msg = readMsg(&rcvq);
+    value = msg;
+    set = 2;
+
+    wait(&m_sensor);
+    sensor.id = id;
+    sensor.value = value;
+    sensor.set = set;
+    signal(&m_sensor);
 }
 
 /**
  * @brief Get the checkpoint object
  *
  * @param cp
- * @return int
  */
-int get_checkpoint(checkpoint_t *cp)
+void get_checkpoint(checkpoint_t *cp)
 {
     int period = 10;
     int retries = 10;
@@ -172,6 +207,7 @@ int get_checkpoint(checkpoint_t *cp)
     wait_for_q(&rcvq, period, &retries);
     axis_y_high = readMsg(&rcvq);
 
+    wait(&m_checkpoint);
     cp->axis_x = axis_x_high;
     cp->axis_x = cp->axis_x << 8;
     cp->axis_x |= axis_x_low;
@@ -179,52 +215,33 @@ int get_checkpoint(checkpoint_t *cp)
     cp->axis_y = axis_y_high;
     cp->axis_y = cp->axis_y << 8;
     cp->axis_y |= axis_y_low;
+
+    cp->set = 2;
+    signal(&m_checkpoint);
 }
 
 /**
- * @brief Set the feedback object
+ * @brief Get the params object
  *
+ * @param params
  */
-void set_feedback()
+void get_parameters(parameters_t *params)
 {
-    ushort msg;
     int period = 10;
     int retries = 10;
 
-    // TODO change this variables for global variables
-    int sensor;
-    int sensor_read;
-    int checkpoint_read;
-    checkpoint_t cp;
+    wait_for_q(&rcvq, period, &retries);
+    params->angular_speed = readMsg(&rcvq);
+
+    retries = 10;
 
     wait_for_q(&rcvq, period, &retries);
-    msg = readMsg(&rcvq);
+    params->linear_speed = readMsg(&rcvq);
 
-    switch (msg)
-    {
-    case 0x00:
-        sensor = get_sensor();
-        sensor_read = 0;
-        break;
+    retries = 10;
 
-    case 0x04:
-        sensor = get_sensor();
-        sensor_read = -1;
-        break;
-
-    case 0x40:
-        get_checkpoint(&cp);
-        checkpoint_read = 0;
-        break;
-
-    case 0x44:
-        get_checkpoint(&cp);
-        checkpoint_read = -1;
-        break;
-
-    default:
-        break;
-    }
+    wait_for_q(&rcvq, period, &retries);
+    params->time = readMsg(&rcvq);
 }
 
 /**

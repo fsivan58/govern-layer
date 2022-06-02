@@ -2,12 +2,17 @@
 #include <stdlib.h>
 
 #include "msgQ.h"
+#include "defs.h"
+#include "uk/AuK_v1_1_7.h"
 
 int main(int argc, char **argv)
 {
 
   char op;
   ushort msg;
+
+  // initialization section
+  init_semaphore(&m_checkpoint, 1);
 
   while (1)
   {
