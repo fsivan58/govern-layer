@@ -2,6 +2,14 @@
 .vscode
 *.code-workspace
 
+# project config
+build
+debug
+dist
+ndbproject
+*.log
+*.log.inx
+
 # Prerequisites
 *.d
 
