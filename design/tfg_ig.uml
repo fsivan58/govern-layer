@@ -425,7 +425,7 @@
         <ownedEnd xmi:type="uml:Property" xmi:id="_2AsQEVOcEeySD_ApfBmgRw" name="feedback-task" type="_zjJ2oFOcEeySD_ApfBmgRw" association="_2Aqa4FOcEeySD_ApfBmgRw"/>
         <ownedEnd xmi:type="uml:Property" xmi:id="_2AteMFOcEeySD_ApfBmgRw" name="instruction-handler" type="_xy5r4FOaEeySD_ApfBmgRw" association="_2Aqa4FOcEeySD_ApfBmgRw"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_5WV9QFOcEeySD_ApfBmgRw" name="route-task"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_5WV9QFOcEeySD_ApfBmgRw" name="uart_handler"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_7rgd0FOcEeySD_ApfBmgRw" memberEnd="_7rhE4lOcEeySD_ApfBmgRw _7rhr8FOcEeySD_ApfBmgRw">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7rhE4FOcEeySD_ApfBmgRw" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7rhE4VOcEeySD_ApfBmgRw" key="nature" value="UML_Nature"/>
@@ -437,36 +437,53 @@
         <region xmi:type="uml:Region" xmi:id="_K0oHIFOfEeySD_ApfBmgRw" name="Region1">
           <transition xmi:type="uml:Transition" xmi:id="_C2u2wGv5Eey5KKgJPOVaLw" name="0x00" source="_Oarn0FOfEeySD_ApfBmgRw" target="__afZYGv4Eey5KKgJPOVaLw"/>
           <transition xmi:type="uml:Transition" xmi:id="_aNjMMGv5Eey5KKgJPOVaLw" name="0x00" source="__afZYGv4Eey5KKgJPOVaLw" target="_F5QMkGv5Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_d3EQkGv5Eey5KKgJPOVaLw" name="0x40" source="__afZYGv4Eey5KKgJPOVaLw" target="_LrssUGv5Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_kMb3MGv5Eey5KKgJPOVaLw" name="0x80" source="__afZYGv4Eey5KKgJPOVaLw" target="_NhZpsGv5Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_xaxgwGv5Eey5KKgJPOVaLw" name="0xC0" source="__afZYGv4Eey5KKgJPOVaLw" target="_PrI9YGv5Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_CsmN4Gv6Eey5KKgJPOVaLw" name="0x40" source="_Oarn0FOfEeySD_ApfBmgRw" target="_6Xr78Gv6Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_dR1nIGv6Eey5KKgJPOVaLw" name="0xXX" source="_1_tEgGv5Eey5KKgJPOVaLw" target="_6NCAkGv5Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_hLv38Gv6Eey5KKgJPOVaLw" name="0xXX" source="_6NCAkGv5Eey5KKgJPOVaLw" target="_-IMOkGv5Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_i9-DgGv6Eey5KKgJPOVaLw" name="0xXX" source="_-IMOkGv5Eey5KKgJPOVaLw" target="__kTnQGv5Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_nD7zUGv6Eey5KKgJPOVaLw" name="0xFF" source="__kTnQGv5Eey5KKgJPOVaLw" target="_Oarn0FOfEeySD_ApfBmgRw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_0UmYIGv6Eey5KKgJPOVaLw" name="0xXX" source="__kTnQGv5Eey5KKgJPOVaLw" target="_1_tEgGv5Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_BciewGv7Eey5KKgJPOVaLw" name="0xXX" source="_6Xr78Gv6Eey5KKgJPOVaLw" target="_1_tEgGv5Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_jf0W4Gv7Eey5KKgJPOVaLw" name="0X80" source="_Oarn0FOfEeySD_ApfBmgRw" target="_I9FfEGv7Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_msqGUGv7Eey5KKgJPOVaLw" name="0xXX" source="_I9FfEGv7Eey5KKgJPOVaLw" target="_JkJfEGv7Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_qItWcGv7Eey5KKgJPOVaLw" name="0xXX" source="_JkJfEGv7Eey5KKgJPOVaLw" target="_J-6vgGv7Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_sXydIGv7Eey5KKgJPOVaLw" name="0xXX" source="_J-6vgGv7Eey5KKgJPOVaLw" target="_f66FsGv7Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_yN1DcGv7Eey5KKgJPOVaLw" name="0xXX" source="_f66FsGv7Eey5KKgJPOVaLw" target="_Oarn0FOfEeySD_ApfBmgRw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_d3EQkGv5Eey5KKgJPOVaLw" name="0x01" source="__afZYGv4Eey5KKgJPOVaLw" target="_LrssUGv5Eey5KKgJPOVaLw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_kMb3MGv5Eey5KKgJPOVaLw" name="0x02" source="__afZYGv4Eey5KKgJPOVaLw" target="_NhZpsGv5Eey5KKgJPOVaLw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_xaxgwGv5Eey5KKgJPOVaLw" name="0x04" source="__afZYGv4Eey5KKgJPOVaLw" target="_PrI9YGv5Eey5KKgJPOVaLw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CsmN4Gv6Eey5KKgJPOVaLw" name="0x01" source="_Oarn0FOfEeySD_ApfBmgRw" target="_6Xr78Gv6Eey5KKgJPOVaLw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_nD7zUGv6Eey5KKgJPOVaLw" name="0xXXFFXXXX" source="__kTnQGv5Eey5KKgJPOVaLw" target="_Oarn0FOfEeySD_ApfBmgRw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_0UmYIGv6Eey5KKgJPOVaLw" name="0xXX00XXXX" source="__kTnQGv5Eey5KKgJPOVaLw" target="_1_tEgGv5Eey5KKgJPOVaLw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_BciewGv7Eey5KKgJPOVaLw" name="0xXXXXXXXX" source="_6Xr78Gv6Eey5KKgJPOVaLw" target="_1_tEgGv5Eey5KKgJPOVaLw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_jf0W4Gv7Eey5KKgJPOVaLw" name="0X02" source="_Oarn0FOfEeySD_ApfBmgRw" target="_I9FfEGv7Eey5KKgJPOVaLw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_msqGUGv7Eey5KKgJPOVaLw" name="0xXXXXXXXX" source="_I9FfEGv7Eey5KKgJPOVaLw" target="_JkJfEGv7Eey5KKgJPOVaLw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_qItWcGv7Eey5KKgJPOVaLw" name="0xXXXXXXXX" source="_JkJfEGv7Eey5KKgJPOVaLw" target="_J-6vgGv7Eey5KKgJPOVaLw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_sXydIGv7Eey5KKgJPOVaLw" name="0xXXXXXXXX" source="_J-6vgGv7Eey5KKgJPOVaLw" target="_f66FsGv7Eey5KKgJPOVaLw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_yN1DcGv7Eey5KKgJPOVaLw" source="_f66FsGv7Eey5KKgJPOVaLw" target="_Oarn0FOfEeySD_ApfBmgRw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_GYDIUHY0EeySV-tzgHPmpA" source="_F5QMkGv5Eey5KKgJPOVaLw" target="_Oarn0FOfEeySD_ApfBmgRw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_JX0FEHY0EeySV-tzgHPmpA" source="_LrssUGv5Eey5KKgJPOVaLw" target="_Oarn0FOfEeySD_ApfBmgRw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_dQEB4HY0EeySV-tzgHPmpA" source="_NhZpsGv5Eey5KKgJPOVaLw" target="_Oarn0FOfEeySD_ApfBmgRw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_iUNRMHY0EeySV-tzgHPmpA" source="_PrI9YGv5Eey5KKgJPOVaLw" target="_Oarn0FOfEeySD_ApfBmgRw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_vPiqUHakEeyEbZM7_RezjQ" name="0x03" source="_Oarn0FOfEeySD_ApfBmgRw" target="_rpuaMHakEeyEbZM7_RezjQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_EkenkHalEeyEbZM7_RezjQ" name="0x00" source="_rpuaMHakEeyEbZM7_RezjQ" target="_AUFJYHalEeyEbZM7_RezjQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_Hs0xMHaoEeyEbZM7_RezjQ" name="status = [0x01, 0x02]" source="_rpuaMHakEeyEbZM7_RezjQ" target="_FGPwgHaoEeyEbZM7_RezjQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_aiQmIHaoEeyEbZM7_RezjQ" name="0xXXXXXXXX" source="_FGPwgHaoEeyEbZM7_RezjQ" target="_s1Ut0HaoEeyEbZM7_RezjQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_a7wDYOJEEeynbpPsy0IgOA" name="0xXX" source="_AUFJYHalEeyEbZM7_RezjQ" target="_Pi570OJEEeynbpPsy0IgOA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_aFuCUEASEe2uZrl0GowZ6w" name="0xXXXXXXXX" source="_1_tEgGv5Eey5KKgJPOVaLw" target="__kTnQGv5Eey5KKgJPOVaLw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_eMdYwEATEe2uZrl0GowZ6w" name="0xXXXXXXXX" source="_s1Ut0HaoEeyEbZM7_RezjQ" target="_C1R-AHapEeyEbZM7_RezjQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_we5OUEATEe2uZrl0GowZ6w" source="_Pi570OJEEeynbpPsy0IgOA" target="_S2u2oEATEe2uZrl0GowZ6w"/>
+          <transition xmi:type="uml:Transition" xmi:id="_99HG8EATEe2uZrl0GowZ6w" source="_C1R-AHapEeyEbZM7_RezjQ" target="_S2u2oEATEe2uZrl0GowZ6w"/>
+          <transition xmi:type="uml:Transition" xmi:id="__ZJnIEATEe2uZrl0GowZ6w" source="_S2u2oEATEe2uZrl0GowZ6w" target="_Oarn0FOfEeySD_ApfBmgRw"/>
           <subvertex xmi:type="uml:State" xmi:id="_Oarn0FOfEeySD_ApfBmgRw" name="WaitingForMessage"/>
           <subvertex xmi:type="uml:State" xmi:id="__afZYGv4Eey5KKgJPOVaLw" name="ReadSensor"/>
           <subvertex xmi:type="uml:State" xmi:id="_F5QMkGv5Eey5KKgJPOVaLw" name="ReadIR"/>
           <subvertex xmi:type="uml:State" xmi:id="_LrssUGv5Eey5KKgJPOVaLw" name="ReadUS"/>
           <subvertex xmi:type="uml:State" xmi:id="_NhZpsGv5Eey5KKgJPOVaLw" name="ReadIMU"/>
           <subvertex xmi:type="uml:State" xmi:id="_PrI9YGv5Eey5KKgJPOVaLw" name="ReadLIDAR"/>
-          <subvertex xmi:type="uml:State" xmi:id="_1_tEgGv5Eey5KKgJPOVaLw" name="SetXAxisLow"/>
-          <subvertex xmi:type="uml:State" xmi:id="_6NCAkGv5Eey5KKgJPOVaLw" name="SetXAxisHigh"/>
-          <subvertex xmi:type="uml:State" xmi:id="_-IMOkGv5Eey5KKgJPOVaLw" name="SetYAxisLow"/>
-          <subvertex xmi:type="uml:State" xmi:id="__kTnQGv5Eey5KKgJPOVaLw" name="SetYAxisHigh"/>
+          <subvertex xmi:type="uml:State" xmi:id="_1_tEgGv5Eey5KKgJPOVaLw" name="SetXAxis"/>
+          <subvertex xmi:type="uml:State" xmi:id="__kTnQGv5Eey5KKgJPOVaLw" name="SetYAxis"/>
           <subvertex xmi:type="uml:State" xmi:id="_6Xr78Gv6Eey5KKgJPOVaLw" name="SetCoordinates"/>
           <subvertex xmi:type="uml:State" xmi:id="_I9FfEGv7Eey5KKgJPOVaLw" name="SetParameters"/>
           <subvertex xmi:type="uml:State" xmi:id="_JkJfEGv7Eey5KKgJPOVaLw" name="SetAngularSpeed"/>
           <subvertex xmi:type="uml:State" xmi:id="_J-6vgGv7Eey5KKgJPOVaLw" name="SetLinearSpeed"/>
           <subvertex xmi:type="uml:State" xmi:id="_f66FsGv7Eey5KKgJPOVaLw" name="SetTime"/>
+          <subvertex xmi:type="uml:State" xmi:id="_rpuaMHakEeyEbZM7_RezjQ" name="setFeedback"/>
+          <subvertex xmi:type="uml:State" xmi:id="_AUFJYHalEeyEbZM7_RezjQ" name="readSensorID"/>
+          <subvertex xmi:type="uml:State" xmi:id="_FGPwgHaoEeyEbZM7_RezjQ" name="setCheckpointStatus"/>
+          <subvertex xmi:type="uml:State" xmi:id="_s1Ut0HaoEeyEbZM7_RezjQ" name="setXAxis"/>
+          <subvertex xmi:type="uml:State" xmi:id="_C1R-AHapEeyEbZM7_RezjQ" name="setYAxis"/>
+          <subvertex xmi:type="uml:State" xmi:id="_Pi570OJEEeynbpPsy0IgOA" name="readSensorStatus"/>
+          <subvertex xmi:type="uml:State" xmi:id="_RGjScEATEe2uZrl0GowZ6w" name="CopyOf_readSensorStatus_49"/>
+          <subvertex xmi:type="uml:State" xmi:id="_S2u2oEATEe2uZrl0GowZ6w" name="establishFeedbackMessage"/>
         </region>
       </packagedElement>
       <packagedElement xmi:type="uml:StateMachine" xmi:id="_vyruUFOfEeySD_ApfBmgRw" name="StateMachine44">
@@ -506,6 +523,59 @@
           <transition xmi:type="uml:Transition" xmi:id="_oYLvYFaDEeyeFcHhIlOTEQ" name="computeDistance" source="_lpfxAFaCEeyeFcHhIlOTEQ" target="_h9FJoFaCEeyeFcHhIlOTEQ"/>
           <subvertex xmi:type="uml:State" xmi:id="_h9FJoFaCEeyeFcHhIlOTEQ" name="waitingForOpPing"/>
           <subvertex xmi:type="uml:State" xmi:id="_lpfxAFaCEeyeFcHhIlOTEQ" name="waitingForEcho"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_zybGcHYyEeySV-tzgHPmpA" name="StateMachine50">
+        <region xmi:type="uml:Region" xmi:id="_0yGawHYyEeySV-tzgHPmpA" name="Region1">
+          <subvertex xmi:type="uml:State" xmi:id="_7iVYcHYyEeySV-tzgHPmpA" name="WaitingForMessage"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_hNadsHYzEeySV-tzgHPmpA" name="StateMachine51">
+        <region xmi:type="uml:Region" xmi:id="_ji3SIHYzEeySV-tzgHPmpA" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_AkvF4HY0EeySV-tzgHPmpA" name="sensorRead  = 1" source="_lJYkAHYzEeySV-tzgHPmpA" target="_17P-sHYzEeySV-tzgHPmpA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_rXeBcHY0EeySV-tzgHPmpA" name="sensorRead = -1" source="_lJYkAHYzEeySV-tzgHPmpA" target="_17P-snYzEeySV-tzgHPmpA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_tyU6UHY0EeySV-tzgHPmpA" name="checkpoint_read = 1" source="_lJYkAHYzEeySV-tzgHPmpA" target="_17PXoHYzEeySV-tzgHPmpA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_labT4HY3EeySV-tzgHPmpA" name="0x00" source="_17P-sHYzEeySV-tzgHPmpA" target="_hlx9kHY3EeySV-tzgHPmpA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_3U_cAHY3EeySV-tzgHPmpA" name="0xXX" source="_hlx9kHY3EeySV-tzgHPmpA" target="_lJYkAHYzEeySV-tzgHPmpA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1-UukHY4EeySV-tzgHPmpA" name="0xXX" source="_efDAsHY4EeySV-tzgHPmpA" target="_iYEgsHY4EeySV-tzgHPmpA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_sq5XwHauEeyEbZM7_RezjQ" name="checkpoint_read = -1" source="_lJYkAHYzEeySV-tzgHPmpA" target="_rPqI0HauEeyEbZM7_RezjQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_39z2cHauEeyEbZM7_RezjQ" name="0x00" source="_17PXoHYzEeySV-tzgHPmpA" target="_efDAsHY4EeySV-tzgHPmpA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_6i8FoHauEeyEbZM7_RezjQ" name="0xFF" source="_rPqI0HauEeyEbZM7_RezjQ" target="_efDAsHY4EeySV-tzgHPmpA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_92C1IHauEeyEbZM7_RezjQ" name="0xXX" source="_iYEgsHY4EeySV-tzgHPmpA" target="_or4oIHY4EeySV-tzgHPmpA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_AEHPMHavEeyEbZM7_RezjQ" name="0xXX" source="_or4oIHY4EeySV-tzgHPmpA" target="_v_jDAHY4EeySV-tzgHPmpA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_FBM0QHavEeyEbZM7_RezjQ" name="0xXX" source="_v_jDAHY4EeySV-tzgHPmpA" target="_lJYkAHYzEeySV-tzgHPmpA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_Qfif0HavEeyEbZM7_RezjQ" name="0xFF" source="_17P-snYzEeySV-tzgHPmpA" target="_hlx9kHY3EeySV-tzgHPmpA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_gmRdYHawEeyEbZM7_RezjQ" name="0xXX" source="_6I4xcHavEeyEbZM7_RezjQ" target="_bSYh4HawEeyEbZM7_RezjQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_l3XjkHawEeyEbZM7_RezjQ" name="0xXX" source="_bSYh4HawEeyEbZM7_RezjQ" target="_jEOGgHawEeyEbZM7_RezjQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_p7gucHawEeyEbZM7_RezjQ" name="0xXX" source="_jEOGgHawEeyEbZM7_RezjQ" target="_nXt8AHawEeyEbZM7_RezjQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_vfO1sHawEeyEbZM7_RezjQ" name="0xXX" source="_nXt8AHawEeyEbZM7_RezjQ" target="_tbxwMHawEeyEbZM7_RezjQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_z3ku8HawEeyEbZM7_RezjQ" name="0xXX" source="_tbxwMHawEeyEbZM7_RezjQ" target="_bSYh4HawEeyEbZM7_RezjQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_4FPCMHawEeyEbZM7_RezjQ" name="0xFF &amp;&amp; coordinatesReady &lt;= 0" source="_tbxwMHawEeyEbZM7_RezjQ" target="_lJYkAHYzEeySV-tzgHPmpA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_-tQfEHawEeyEbZM7_RezjQ" name="coordinatesReady = 1" source="_lJYkAHYzEeySV-tzgHPmpA" target="_6I4xcHavEeyEbZM7_RezjQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_TfDTAHaxEeyEbZM7_RezjQ" name="parametersReady = 1" source="_lJYkAHYzEeySV-tzgHPmpA" target="_QvhxsHaxEeyEbZM7_RezjQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_hSXR4HaxEeyEbZM7_RezjQ" name="0xXX" source="_QvhxsHaxEeyEbZM7_RezjQ" target="_cmDTwHaxEeyEbZM7_RezjQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_iuX84HaxEeyEbZM7_RezjQ" name="0xXX" source="_cmDTwHaxEeyEbZM7_RezjQ" target="_ds2jwHaxEeyEbZM7_RezjQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_kIbgEHaxEeyEbZM7_RezjQ" name="0xXX" source="_ds2jwHaxEeyEbZM7_RezjQ" target="_eo7xgHaxEeyEbZM7_RezjQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_rHpU8HaxEeyEbZM7_RezjQ" name="0xXX &amp;&amp; parametersReady &lt;= 0" source="_eo7xgHaxEeyEbZM7_RezjQ" target="_lJYkAHYzEeySV-tzgHPmpA"/>
+          <subvertex xmi:type="uml:State" xmi:id="_lJYkAHYzEeySV-tzgHPmpA" name="Waiting"/>
+          <subvertex xmi:type="uml:State" xmi:id="_17PXoHYzEeySV-tzgHPmpA" name="checkpointOK"/>
+          <subvertex xmi:type="uml:State" xmi:id="_17P-sHYzEeySV-tzgHPmpA" name="sensorReadOK"/>
+          <subvertex xmi:type="uml:State" xmi:id="_17P-snYzEeySV-tzgHPmpA" name="sensorReadKO"/>
+          <subvertex xmi:type="uml:State" xmi:id="_hlx9kHY3EeySV-tzgHPmpA" name="setSensor"/>
+          <subvertex xmi:type="uml:State" xmi:id="_efDAsHY4EeySV-tzgHPmpA" name="setXAxisLow"/>
+          <subvertex xmi:type="uml:State" xmi:id="_iYEgsHY4EeySV-tzgHPmpA" name="setXAxisHigh"/>
+          <subvertex xmi:type="uml:State" xmi:id="_or4oIHY4EeySV-tzgHPmpA" name="setYAxisLow"/>
+          <subvertex xmi:type="uml:State" xmi:id="_v_jDAHY4EeySV-tzgHPmpA" name="setYAxisHigh"/>
+          <subvertex xmi:type="uml:State" xmi:id="_rPqI0HauEeyEbZM7_RezjQ" name="checkpointKO"/>
+          <subvertex xmi:type="uml:State" xmi:id="_6I4xcHavEeyEbZM7_RezjQ" name="sendCoordinatesToNav"/>
+          <subvertex xmi:type="uml:State" xmi:id="_bSYh4HawEeyEbZM7_RezjQ" name="setXAxisLow"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jEOGgHawEeyEbZM7_RezjQ" name="setXAxisHigh"/>
+          <subvertex xmi:type="uml:State" xmi:id="_nXt8AHawEeyEbZM7_RezjQ" name="setYAxisLow"/>
+          <subvertex xmi:type="uml:State" xmi:id="_tbxwMHawEeyEbZM7_RezjQ" name="setYAxisHigh"/>
+          <subvertex xmi:type="uml:State" xmi:id="_QvhxsHaxEeyEbZM7_RezjQ" name="setParametersToNav"/>
+          <subvertex xmi:type="uml:State" xmi:id="_cmDTwHaxEeyEbZM7_RezjQ" name="setAngularSpeed"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ds2jwHaxEeyEbZM7_RezjQ" name="setLinearSpeed"/>
+          <subvertex xmi:type="uml:State" xmi:id="_eo7xgHaxEeyEbZM7_RezjQ" name="setTime"/>
         </region>
       </packagedElement>
     </packagedElement>
@@ -568,6 +638,12 @@
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Ka7oIHamEeyEbZM7_RezjQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Ka_SgHamEeyEbZM7_RezjQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
     </profileApplication>
   </uml:Model>
   <Blocks:Block xmi:id="_wzFxMCt4Eeywxp_wS_SF9Q" base_Class="_wyTHACt4Eeywxp_wS_SF9Q"/>
