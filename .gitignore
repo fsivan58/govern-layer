@@ -1,6 +1,9 @@
 # vscode config
 .vscode
 *.code-workspace
+*.generated_files
+nbproject
+Makefile
 
 # project config
 build
