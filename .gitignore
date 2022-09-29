@@ -1,15 +1,14 @@
 # vscode config
 .vscode
 *.code-workspace
-*.generated_files
-nbproject
-Makefile
 
 # project config
 build
 debug
 dist
-ndbproject
+nbproject
+*.generated_files
+*Makefile
 *.log
 *.log.inx
 
