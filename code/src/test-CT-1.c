@@ -48,6 +48,7 @@
 
 #include "xc.h"
 #include "AuK_v1_1_8.h"
+#include "queue.h"
 #include <libpic30.h>
 #include <stdio.h>
 
@@ -204,15 +205,35 @@ void init_uart2(void)
     
 }
 
+Queue q;
+Tsemaphore s;
 
 void test_task()
 {
+
+    int val = 0;
     while(1)
     {
-        printf("B");
+        wait(&s);
+        add(&q, val);
+        printf("added %d\n", val);
+        ++val;
+        signal(&s);
     }
 }
 
+void test_task_2()
+{
+    int val;
+ 
+    while(1)
+    {
+        wait(&s);
+        val = pop(&q);
+        printf("popped %d\n", val);
+        signal(&s);
+    }
+}
 
 int t_id;
 
@@ -231,12 +252,18 @@ int main(void)
     
     if(x != 0)
         return(x);
+
+    init_semaphore(&s, 1);
     
+    new_q(&q);
+
     t_id = create_task(__builtin_tblpage(test_task),
                        __builtin_tbloffset(test_task), 200, 1);
-    
+        
+    t_id = create_task(__builtin_tblpage(test_task_2),
+                       __builtin_tbloffset(test_task_2), 200, 1);
+
     start_AuK();
-    
     
     Sleep();
     return(0);
