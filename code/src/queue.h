@@ -8,9 +8,9 @@ typedef struct {
     int size;
 } Queue;
 
-void new_q (Queue *q);
-int pop (Queue *q);
-int add (Queue *q, int element);
+void init_q (Queue *q, int size);
+int dequeue (Queue *q);
+int enqueue (Queue *q, int element);
 int is_empty (Queue *q);
 int is_full (Queue *q);
 void destroy_q (Queue *q);
