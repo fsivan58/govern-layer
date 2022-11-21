@@ -4,18 +4,18 @@
 // custom libraries 
 #include "queue.h"
 
-void new_q (Queue *q)
+void init_q (Queue *q, int size)
 {
     int i;
 
     q->size = 0;
-    for (i = 0; i < MAX_Q_SIZE; ++i)
+    for (i = 0; i < size; ++i)
     {
         q->q[i] = 0;
     }
 }
 
-int pop (Queue *q)
+int dequeue (Queue *q)
 {
     int i;
     int val = q->q[0];
@@ -36,7 +36,7 @@ int pop (Queue *q)
     return val;
 }
 
-int add (Queue *q, int element)
+int enqueue (Queue *q, int element)
 {
     int val = 1;
 

@@ -215,8 +215,9 @@ void test_task()
     while(1)
     {
         wait(&s);
-        add(&q, val);
-        printf("added %d\n", val);
+        enqueue(&q, val);
+        ++val;
+        enqueue(&q, val);
         ++val;
         signal(&s);
     }
@@ -229,8 +230,7 @@ void test_task_2()
     while(1)
     {
         wait(&s);
-        val = pop(&q);
-        printf("popped %d\n", val);
+        val = dequeue(&q);
         signal(&s);
     }
 }
@@ -255,7 +255,7 @@ int main(void)
 
     init_semaphore(&s, 1);
     
-    new_q(&q);
+    init_q(&q, MAX_Q_SIZE);
 
     t_id = create_task(__builtin_tblpage(test_task),
                        __builtin_tbloffset(test_task), 200, 1);
