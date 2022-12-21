@@ -58,7 +58,7 @@ void init_clock_signal(void)
     RCONbits.SWDTEN = 0; // Disable Watchdog Timer
 
     // This chip is taged with I-Temp stamp (-I/SP) then the temperature range
-    // is -40ºC to 85ºC which implies a maximum of 70 MIPS (Fosc = 140 MHz)
+    // is -40ï¿½C to 85ï¿½C which implies a maximum of 70 MIPS (Fosc = 140 MHz)
     // Chapter 33.1 DC characteristics in dsPIC33EP512GM604 manual.
     
     // We take a conservative configuration
@@ -145,7 +145,7 @@ void init_uart(void)
      When 9600 Baud rate is selected it is necessary to wait 104 us */
     __delay32(383);
     
-    __C30_UART = 1; // Redirects printf output to UART1
+    // __C30_UART = 1; // Redirects printf output to UART1
 }
 
 void init_uart2(void)

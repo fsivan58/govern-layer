@@ -122,8 +122,8 @@ void init_uart(void)
     U1STAbits.URXISEL = 0;  // Interrupt on each character received
     
     // U1BRG = (Fcy/(16*Baud_rate) -1)
-    //U1BRG = 3470;            // For 9600 bauds (119.808/2 MHz)/(16*9600) - 1
-    U1BRG = 32; //for 115200 bauds
+    U1BRG = 3470;            // For 9600 bauds (119.808/2 MHz)/(16*9600) - 1
+    //U1BRG = 32; //for 115200 bauds
     
     /* Configure interrupts */
     IPC2bits.U1RXIP = 2;
