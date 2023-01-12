@@ -48,11 +48,14 @@
 
 #include "xc.h"
 #include "AuK_v1_1_8.h"
-#include "queue.h"
+
 #include <libpic30.h>
 #include <stdio.h>
 
-
+#inclue "definitions.h"
+#include "global.h"
+#include "queue.h"
+#include "instruction-handler.h"
 
 void init_clock_signal(void)
 {
@@ -205,8 +208,8 @@ void init_uart2(void)
     
 }
 
-Queue q;
-Tsemaphore s;
+extern Queue q;
+extern Tsemaphore s;
 
 void test_task()
 {
@@ -227,7 +230,7 @@ void test_task_2()
 {
     int val;
  
-    while(1)
+    while(TRUE)
     {
         wait(&s);
         val = dequeue(&q);
