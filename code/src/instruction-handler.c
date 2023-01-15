@@ -33,7 +33,7 @@ void instruction_handler()
             switch(c)
             {
                 case 0x01:
-                    handle_sensor();
+                    handle_sensor(int msg);
                     break;
                 case 0x02:
                     handle_coordinates();
