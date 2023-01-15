@@ -9,6 +9,8 @@ Queue sensor_q;
 Queue coordinates_q;
 Queue params_q;
 Queue feedback_q;
+
 Tsemaphore s;
+Tsemaphore sensor_s;
 
 #endif /* GLOBAL */
