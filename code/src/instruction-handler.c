@@ -13,6 +13,7 @@
 
 extern Queue q;
 extern Queue sensor_q;
+extern Queue coordinates_q;
 extern Tsemaphore s;
 
 void instruction_handler()
