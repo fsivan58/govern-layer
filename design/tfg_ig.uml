@@ -318,7 +318,7 @@
         <ownedEnd xmi:type="uml:Property" xmi:id="_b_1owi9qEeywhu_OMdb3lw" name="execute job plan" type="_RA8fECxFEeyUCJ4vd2kxnw" association="_b_0aoC9qEeywhu_OMdb3lw"/>
         <ownedEnd xmi:type="uml:Property" xmi:id="_b_2P0C9qEeywhu_OMdb3lw" name="governor" type="_u2lHgCxEEeyUCJ4vd2kxnw" association="_b_0aoC9qEeywhu_OMdb3lw"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_sT8wcC9qEeywhu_OMdb3lw" name="upload file">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_sT8wcC9qEeywhu_OMdb3lw" name="send coordinates list">
         <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_ajVZEC9rEeywhu_OMdb3lw" name="ExtensionPoint1"/>
         <include xmi:type="uml:Include" xmi:id="_n4BQUC9tEeywhu_OMdb3lw" addition="_QkKHMC3LEey7ga-p4Ayw6g"/>
       </packagedElement>
@@ -377,61 +377,6 @@
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_0Mis0DTaEeyaXeauSwk6Vg" name="read position info" type="_yEzkQDTaEeyaXeauSwk6Vg" association="_0MfpgDTaEeyaXeauSwk6Vg"/>
         <ownedEnd xmi:type="uml:Property" xmi:id="_0MjT4DTaEeyaXeauSwk6Vg" name="governor" type="_u2lHgCxEEeyUCJ4vd2kxnw" association="_0MfpgDTaEeyaXeauSwk6Vg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_Sp-hgFOZEeySD_ApfBmgRw" name="op-comm-handler"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_uRYs8FOaEeySD_ApfBmgRw" name="nav-comm-handler"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_xy5r4FOaEeySD_ApfBmgRw" name="instruction-handler"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_0J-Q8FOaEeySD_ApfBmgRw" name="sensor-handler"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_5inwoFOaEeySD_ApfBmgRw" name="us-reader">
-        <generalization xmi:type="uml:Generalization" xmi:id="_lSu6cFObEeySD_ApfBmgRw" general="_0J-Q8FOaEeySD_ApfBmgRw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_-DfTwFOaEeySD_ApfBmgRw" name="ir-reader">
-        <generalization xmi:type="uml:Generalization" xmi:id="_mZLlIFObEeySD_ApfBmgRw" general="_0J-Q8FOaEeySD_ApfBmgRw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="__YkQUFOaEeySD_ApfBmgRw" name="imu-reader">
-        <generalization xmi:type="uml:Generalization" xmi:id="_pB1pcFObEeySD_ApfBmgRw" general="_0J-Q8FOaEeySD_ApfBmgRw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_AiQcQFObEeySD_ApfBmgRw" name="lidar-reader">
-        <generalization xmi:type="uml:Generalization" xmi:id="_pyYVkFObEeySD_ApfBmgRw" general="_0J-Q8FOaEeySD_ApfBmgRw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_gCvyEFOcEeySD_ApfBmgRw" memberEnd="_gCyOUFOcEeySD_ApfBmgRw _gCy1YFOcEeySD_ApfBmgRw">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gCxnQFOcEeySD_ApfBmgRw" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gCxnQVOcEeySD_ApfBmgRw" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_gCyOUFOcEeySD_ApfBmgRw" name="instruction-handler" type="_xy5r4FOaEeySD_ApfBmgRw" association="_gCvyEFOcEeySD_ApfBmgRw"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_gCy1YFOcEeySD_ApfBmgRw" name="sensor-handler" type="_0J-Q8FOaEeySD_ApfBmgRw" association="_gCvyEFOcEeySD_ApfBmgRw">
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lmrUsFOcEeySD_ApfBmgRw" value="*"/>
-        </ownedEnd>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_m6IgoFOcEeySD_ApfBmgRw" memberEnd="_m6JuwlOcEeySD_ApfBmgRw _m6K84FOcEeySD_ApfBmgRw">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_m6JuwFOcEeySD_ApfBmgRw" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_m6JuwVOcEeySD_ApfBmgRw" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_m6JuwlOcEeySD_ApfBmgRw" name="instruction-handler" type="_xy5r4FOaEeySD_ApfBmgRw" association="_m6IgoFOcEeySD_ApfBmgRw"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_m6K84FOcEeySD_ApfBmgRw" name="op-comm-handler" type="_Sp-hgFOZEeySD_ApfBmgRw" association="_m6IgoFOcEeySD_ApfBmgRw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_q6TKcFOcEeySD_ApfBmgRw" memberEnd="_q6UYkVOcEeySD_ApfBmgRw _q6U_oFOcEeySD_ApfBmgRw">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q6TxgFOcEeySD_ApfBmgRw" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_q6UYkFOcEeySD_ApfBmgRw" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_q6UYkVOcEeySD_ApfBmgRw" name="instruction-handler" type="_xy5r4FOaEeySD_ApfBmgRw" association="_q6TKcFOcEeySD_ApfBmgRw"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_q6U_oFOcEeySD_ApfBmgRw" name="nav-comm-handler" type="_uRYs8FOaEeySD_ApfBmgRw" association="_q6TKcFOcEeySD_ApfBmgRw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_zjJ2oFOcEeySD_ApfBmgRw" name="feedback-task"/>
-      <packagedElement xmi:type="uml:Association" xmi:id="_2Aqa4FOcEeySD_ApfBmgRw" memberEnd="_2AsQEVOcEeySD_ApfBmgRw _2AteMFOcEeySD_ApfBmgRw">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2ArpAFOcEeySD_ApfBmgRw" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2AsQEFOcEeySD_ApfBmgRw" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_2AsQEVOcEeySD_ApfBmgRw" name="feedback-task" type="_zjJ2oFOcEeySD_ApfBmgRw" association="_2Aqa4FOcEeySD_ApfBmgRw"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_2AteMFOcEeySD_ApfBmgRw" name="instruction-handler" type="_xy5r4FOaEeySD_ApfBmgRw" association="_2Aqa4FOcEeySD_ApfBmgRw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_5WV9QFOcEeySD_ApfBmgRw" name="uart_handler"/>
-      <packagedElement xmi:type="uml:Association" xmi:id="_7rgd0FOcEeySD_ApfBmgRw" memberEnd="_7rhE4lOcEeySD_ApfBmgRw _7rhr8FOcEeySD_ApfBmgRw">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7rhE4FOcEeySD_ApfBmgRw" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7rhE4VOcEeySD_ApfBmgRw" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_7rhE4lOcEeySD_ApfBmgRw" name="route-task" type="_5WV9QFOcEeySD_ApfBmgRw" association="_7rgd0FOcEeySD_ApfBmgRw"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_7rhr8FOcEeySD_ApfBmgRw" name="instruction-handler" type="_xy5r4FOaEeySD_ApfBmgRw" association="_7rgd0FOcEeySD_ApfBmgRw"/>
       </packagedElement>
       <packagedElement xmi:type="uml:StateMachine" xmi:id="_EXKUcFOfEeySD_ApfBmgRw" name="StateMachine43">
         <region xmi:type="uml:Region" xmi:id="_K0oHIFOfEeySD_ApfBmgRw" name="Region1">
@@ -502,21 +447,6 @@
           <subvertex xmi:type="uml:State" xmi:id="_qKBnQFOgEeySD_ApfBmgRw" name="waitingForInstruction"/>
         </region>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_i2-a8FOhEeySD_ApfBmgRw" name="task-enum"/>
-      <packagedElement xmi:type="uml:Association" xmi:id="_qphKMFOhEeySD_ApfBmgRw" memberEnd="_qpiYUVOhEeySD_ApfBmgRw _qpjmcFOhEeySD_ApfBmgRw">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qphxQFOhEeySD_ApfBmgRw" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qpiYUFOhEeySD_ApfBmgRw" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_qpiYUVOhEeySD_ApfBmgRw" name="task-enum" type="_i2-a8FOhEeySD_ApfBmgRw" association="_qphKMFOhEeySD_ApfBmgRw"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_qpjmcFOhEeySD_ApfBmgRw" name="op-comm-handler" type="_Sp-hgFOZEeySD_ApfBmgRw" association="_qphKMFOhEeySD_ApfBmgRw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_uJIrsFOhEeySD_ApfBmgRw" memberEnd="_uJJSwlOhEeySD_ApfBmgRw _uJJ50FOhEeySD_ApfBmgRw">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uJJSwFOhEeySD_ApfBmgRw" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uJJSwVOhEeySD_ApfBmgRw" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_uJJSwlOhEeySD_ApfBmgRw" name="instruction-handler" type="_xy5r4FOaEeySD_ApfBmgRw" association="_uJIrsFOhEeySD_ApfBmgRw"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_uJJ50FOhEeySD_ApfBmgRw" name="task-enum" type="_i2-a8FOhEeySD_ApfBmgRw" association="_uJIrsFOhEeySD_ApfBmgRw"/>
-      </packagedElement>
       <packagedElement xmi:type="uml:StateMachine" xmi:id="_cGfJsFaCEeyeFcHhIlOTEQ" name="StateMachine49">
         <region xmi:type="uml:Region" xmi:id="_gyDg8FaCEeyeFcHhIlOTEQ" name="Region1">
           <transition xmi:type="uml:Transition" xmi:id="_AqAxAFaDEeyeFcHhIlOTEQ" name="sendTrigger" source="_h9FJoFaCEeyeFcHhIlOTEQ" target="_lpfxAFaCEeyeFcHhIlOTEQ"/>
@@ -578,6 +508,15 @@
           <subvertex xmi:type="uml:State" xmi:id="_eo7xgHaxEeyEbZM7_RezjQ" name="setTime"/>
         </region>
       </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_CnUlELtfEe2Nrs5y5qC-LA" name="RCV_UART_Task"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_PO2GQLtfEe2Nrs5y5qC-LA" name="Queue_Handler"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_T1e6MLtfEe2Nrs5y5qC-LA" name="SND_MiWi_Task"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_WNONoLtfEe2Nrs5y5qC-LA" name="SND_UART_Task"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bEnaYLtfEe2Nrs5y5qC-LA" name="RCV_MiWi_Task"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_oJeX0LtfEe2Nrs5y5qC-LA"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_ul96ILtfEe2Nrs5y5qC-LA"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_wsuyULtfEe2Nrs5y5qC-LA"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_x6FWQLtfEe2Nrs5y5qC-LA"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_gy62ACt0Eey46chO2_v6BQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gy-gYCt0Eey46chO2_v6BQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -672,15 +611,9 @@
   <Blocks:Block xmi:id="_ebK3oDPcEeya7ZL8rbV3Fw" base_Class="_ebDi4DPcEeya7ZL8rbV3Fw"/>
   <Blocks:Block xmi:id="_hFGuUDPcEeya7ZL8rbV3Fw" base_Class="_hE9kYDPcEeya7ZL8rbV3Fw"/>
   <Blocks:Block xmi:id="_ruNPoEUiEey0vKlnMBRkAg" base_Class="_rtqdEEUiEey0vKlnMBRkAg"/>
-  <Blocks:Block xmi:id="_SqMj8FOZEeySD_ApfBmgRw" base_Class="_Sp-hgFOZEeySD_ApfBmgRw"/>
-  <Blocks:Block xmi:id="_uRkTIFOaEeySD_ApfBmgRw" base_Class="_uRYs8FOaEeySD_ApfBmgRw"/>
-  <Blocks:Block xmi:id="_xzCOwFOaEeySD_ApfBmgRw" base_Class="_xy5r4FOaEeySD_ApfBmgRw"/>
-  <Blocks:Block xmi:id="_0KFlsFOaEeySD_ApfBmgRw" base_Class="_0J-Q8FOaEeySD_ApfBmgRw"/>
-  <Blocks:Block xmi:id="_5irbAFOaEeySD_ApfBmgRw" base_Class="_5inwoFOaEeySD_ApfBmgRw"/>
-  <Blocks:Block xmi:id="_-DmBcFOaEeySD_ApfBmgRw" base_Class="_-DfTwFOaEeySD_ApfBmgRw"/>
-  <Blocks:Block xmi:id="__Ypv4FOaEeySD_ApfBmgRw" base_Class="__YkQUFOaEeySD_ApfBmgRw"/>
-  <Blocks:Block xmi:id="_AiV70FObEeySD_ApfBmgRw" base_Class="_AiQcQFObEeySD_ApfBmgRw"/>
-  <Blocks:Block xmi:id="_zjP9QFOcEeySD_ApfBmgRw" base_Class="_zjJ2oFOcEeySD_ApfBmgRw"/>
-  <Blocks:Block xmi:id="_5Wa1wFOcEeySD_ApfBmgRw" base_Class="_5WV9QFOcEeySD_ApfBmgRw"/>
-  <Blocks:Block xmi:id="_i3CFUFOhEeySD_ApfBmgRw" base_Class="_i2-a8FOhEeySD_ApfBmgRw"/>
+  <Blocks:Block xmi:id="_CnngALtfEe2Nrs5y5qC-LA" base_Class="_CnUlELtfEe2Nrs5y5qC-LA"/>
+  <Blocks:Block xmi:id="_PO5woLtfEe2Nrs5y5qC-LA" base_Class="_PO2GQLtfEe2Nrs5y5qC-LA"/>
+  <Blocks:Block xmi:id="_T1m2ALtfEe2Nrs5y5qC-LA" base_Class="_T1e6MLtfEe2Nrs5y5qC-LA"/>
+  <Blocks:Block xmi:id="_WNRQ8LtfEe2Nrs5y5qC-LA" base_Class="_WNONoLtfEe2Nrs5y5qC-LA"/>
+  <Blocks:Block xmi:id="_bEuvILtfEe2Nrs5y5qC-LA" base_Class="_bEnaYLtfEe2Nrs5y5qC-LA"/>
 </xmi:XMI>
