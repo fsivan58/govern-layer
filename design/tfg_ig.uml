@@ -246,6 +246,56 @@
         <ownedEnd xmi:type="uml:Property" xmi:id="_1CLgwDPcEeya7ZL8rbV3Fw" name="operatorhw" type="_aG8pYDPcEeya7ZL8rbV3Fw" association="_1CJEgDPcEeya7ZL8rbV3Fw"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_rtqdEEUiEey0vKlnMBRkAg" name="EventStack"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_njRaMMV1Ee2WhI0ZcH7BkQ" name="Robot">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_-IHYwMV4Ee2WhI0ZcH7BkQ" name="Govern" type="_KoTi4MV5Ee2WhI0ZcH7BkQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ilhxAMV5Ee2WhI0ZcH7BkQ" name="Navigation" type="_oZ7_oMV5Ee2WhI0ZcH7BkQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_6Pr5MMV5Ee2WhI0ZcH7BkQ" name="OPInterface" type="__AD38MV5Ee2WhI0ZcH7BkQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_lpMEYMV7Ee2WhI0ZcH7BkQ" name="PCInterface" type="_wLlFEMV7Ee2WhI0ZcH7BkQ" aggregation="composite"/>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_1wDsMMV5Ee2WhI0ZcH7BkQ" name="Connector7">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_1wETQMV5Ee2WhI0ZcH7BkQ" partWithPort="_-IHYwMV4Ee2WhI0ZcH7BkQ" role="_tG76QMV5Ee2WhI0ZcH7BkQ"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_1wETQcV5Ee2WhI0ZcH7BkQ" partWithPort="_ilhxAMV5Ee2WhI0ZcH7BkQ" role="_yz3A0MV5Ee2WhI0ZcH7BkQ"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_PfkXUMV6Ee2WhI0ZcH7BkQ" name="Connector11">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_Pfk-YMV6Ee2WhI0ZcH7BkQ" role="_6Pr5MMV5Ee2WhI0ZcH7BkQ"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_Pfk-YcV6Ee2WhI0ZcH7BkQ" partWithPort="_-IHYwMV4Ee2WhI0ZcH7BkQ" role="_BgvE8MV6Ee2WhI0ZcH7BkQ"/>
+        </ownedConnector>
+        <nestedClassifier xmi:type="uml:Device" xmi:id="_GEdPIMV3Ee2WhI0ZcH7BkQ" name="OperatorPC"/>
+        <nestedClassifier xmi:type="uml:Device" xmi:id="_ZLtM0MV3Ee2WhI0ZcH7BkQ" name="Operator">
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_dmDRMMV3Ee2WhI0ZcH7BkQ" name="UART" type="_wY0MoMV3Ee2WhI0ZcH7BkQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_ScBzUMV4Ee2WhI0ZcH7BkQ" name="MiWi" aggregation="composite"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Component" xmi:id="_KoTi4MV5Ee2WhI0ZcH7BkQ" name="Layer">
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_tG76QMV5Ee2WhI0ZcH7BkQ" name="NavInterface" type="_wY0MoMV3Ee2WhI0ZcH7BkQ" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_BgvE8MV6Ee2WhI0ZcH7BkQ" name="OPInterface" type="_JgeisMV6Ee2WhI0ZcH7BkQ" aggregation="composite"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Component" xmi:id="_oZ7_oMV5Ee2WhI0ZcH7BkQ" name="Layer">
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_yz3A0MV5Ee2WhI0ZcH7BkQ" name="GovInterface" type="_wY0MoMV3Ee2WhI0ZcH7BkQ" aggregation="composite"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Interface" xmi:id="__AD38MV5Ee2WhI0ZcH7BkQ" name="MiWi"/>
+        <nestedClassifier xmi:type="uml:Interface" xmi:id="_JgeisMV6Ee2WhI0ZcH7BkQ" name="MiWi"/>
+        <nestedClassifier xmi:type="uml:Interface" xmi:id="_wLlFEMV7Ee2WhI0ZcH7BkQ" name="MiWi"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_5hIt8MV1Ee2WhI0ZcH7BkQ" name="gov"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_h-fGgMV2Ee2WhI0ZcH7BkQ" name="PC">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_kGIIcMV2Ee2WhI0ZcH7BkQ" name="UART" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_KWV7EMV3Ee2WhI0ZcH7BkQ" name="UART" type="_wY0MoMV3Ee2WhI0ZcH7BkQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Zm-PsMV7Ee2WhI0ZcH7BkQ" name="RobotInterface" type="_i4mMEMV7Ee2WhI0ZcH7BkQ" aggregation="composite"/>
+        <nestedClassifier xmi:type="uml:Interface" xmi:id="_wY0MoMV3Ee2WhI0ZcH7BkQ" name="UART"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TSKmkMV3Ee2WhI0ZcH7BkQ" name="Block2"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_H_-EIMV4Ee2WhI0ZcH7BkQ" name="Block3"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_EBvekMV5Ee2WhI0ZcH7BkQ" name="Block4"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jGRtoMV5Ee2WhI0ZcH7BkQ" name="Block5"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_oYoioMV6Ee2WhI0ZcH7BkQ" name="System">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_tb0vsMV6Ee2WhI0ZcH7BkQ" name="Robot" type="_njRaMMV1Ee2WhI0ZcH7BkQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_R7IlYMV7Ee2WhI0ZcH7BkQ" name="PC" type="_h-fGgMV2Ee2WhI0ZcH7BkQ" aggregation="composite"/>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_xGTA4MV7Ee2WhI0ZcH7BkQ" name="Connector4">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_xGTn8MV7Ee2WhI0ZcH7BkQ" partWithPort="_R7IlYMV7Ee2WhI0ZcH7BkQ" role="_Zm-PsMV7Ee2WhI0ZcH7BkQ"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_xGTn8cV7Ee2WhI0ZcH7BkQ" partWithPort="_tb0vsMV6Ee2WhI0ZcH7BkQ" role="_lpMEYMV7Ee2WhI0ZcH7BkQ"/>
+        </ownedConnector>
+        <nestedClassifier xmi:type="uml:Interface" xmi:id="_i4mMEMV7Ee2WhI0ZcH7BkQ" name="MiWi"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_SNcdYMV7Ee2WhI0ZcH7BkQ" name="Block58"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_AoIUECt1Eey46chO2_v6BQ" name="Diagram">
       <packagedElement xmi:type="uml:Actor" xmi:id="_u2lHgCxEEeyUCJ4vd2kxnw" name="governor"/>
@@ -380,55 +430,7 @@
       </packagedElement>
       <packagedElement xmi:type="uml:StateMachine" xmi:id="_EXKUcFOfEeySD_ApfBmgRw" name="StateMachine43">
         <region xmi:type="uml:Region" xmi:id="_K0oHIFOfEeySD_ApfBmgRw" name="Region1">
-          <transition xmi:type="uml:Transition" xmi:id="_C2u2wGv5Eey5KKgJPOVaLw" name="0x00" source="_Oarn0FOfEeySD_ApfBmgRw" target="__afZYGv4Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_aNjMMGv5Eey5KKgJPOVaLw" name="0x00" source="__afZYGv4Eey5KKgJPOVaLw" target="_F5QMkGv5Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_d3EQkGv5Eey5KKgJPOVaLw" name="0x01" source="__afZYGv4Eey5KKgJPOVaLw" target="_LrssUGv5Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_kMb3MGv5Eey5KKgJPOVaLw" name="0x02" source="__afZYGv4Eey5KKgJPOVaLw" target="_NhZpsGv5Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_xaxgwGv5Eey5KKgJPOVaLw" name="0x04" source="__afZYGv4Eey5KKgJPOVaLw" target="_PrI9YGv5Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_CsmN4Gv6Eey5KKgJPOVaLw" name="0x01" source="_Oarn0FOfEeySD_ApfBmgRw" target="_6Xr78Gv6Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_nD7zUGv6Eey5KKgJPOVaLw" name="0xXXFFXXXX" source="__kTnQGv5Eey5KKgJPOVaLw" target="_Oarn0FOfEeySD_ApfBmgRw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_0UmYIGv6Eey5KKgJPOVaLw" name="0xXX00XXXX" source="__kTnQGv5Eey5KKgJPOVaLw" target="_1_tEgGv5Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_BciewGv7Eey5KKgJPOVaLw" name="0xXXXXXXXX" source="_6Xr78Gv6Eey5KKgJPOVaLw" target="_1_tEgGv5Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_jf0W4Gv7Eey5KKgJPOVaLw" name="0X02" source="_Oarn0FOfEeySD_ApfBmgRw" target="_I9FfEGv7Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_msqGUGv7Eey5KKgJPOVaLw" name="0xXXXXXXXX" source="_I9FfEGv7Eey5KKgJPOVaLw" target="_JkJfEGv7Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_qItWcGv7Eey5KKgJPOVaLw" name="0xXXXXXXXX" source="_JkJfEGv7Eey5KKgJPOVaLw" target="_J-6vgGv7Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_sXydIGv7Eey5KKgJPOVaLw" name="0xXXXXXXXX" source="_J-6vgGv7Eey5KKgJPOVaLw" target="_f66FsGv7Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_yN1DcGv7Eey5KKgJPOVaLw" source="_f66FsGv7Eey5KKgJPOVaLw" target="_Oarn0FOfEeySD_ApfBmgRw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_GYDIUHY0EeySV-tzgHPmpA" name="0xXX" source="_F5QMkGv5Eey5KKgJPOVaLw" target="_Oarn0FOfEeySD_ApfBmgRw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_JX0FEHY0EeySV-tzgHPmpA" name="0xXX" source="_LrssUGv5Eey5KKgJPOVaLw" target="_Oarn0FOfEeySD_ApfBmgRw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_dQEB4HY0EeySV-tzgHPmpA" name="0xXX" source="_NhZpsGv5Eey5KKgJPOVaLw" target="_Oarn0FOfEeySD_ApfBmgRw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_iUNRMHY0EeySV-tzgHPmpA" name="0xXX" source="_PrI9YGv5Eey5KKgJPOVaLw" target="_Oarn0FOfEeySD_ApfBmgRw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_vPiqUHakEeyEbZM7_RezjQ" name="0x03" source="_Oarn0FOfEeySD_ApfBmgRw" target="_rpuaMHakEeyEbZM7_RezjQ"/>
-          <transition xmi:type="uml:Transition" xmi:id="_EkenkHalEeyEbZM7_RezjQ" name="0x00" source="_rpuaMHakEeyEbZM7_RezjQ" target="_AUFJYHalEeyEbZM7_RezjQ"/>
-          <transition xmi:type="uml:Transition" xmi:id="_Hs0xMHaoEeyEbZM7_RezjQ" name="status = [0x01, 0x02]" source="_rpuaMHakEeyEbZM7_RezjQ" target="_FGPwgHaoEeyEbZM7_RezjQ"/>
-          <transition xmi:type="uml:Transition" xmi:id="_aiQmIHaoEeyEbZM7_RezjQ" name="0xXXXXXXXX" source="_FGPwgHaoEeyEbZM7_RezjQ" target="_s1Ut0HaoEeyEbZM7_RezjQ"/>
-          <transition xmi:type="uml:Transition" xmi:id="_a7wDYOJEEeynbpPsy0IgOA" name="0xXX" source="_AUFJYHalEeyEbZM7_RezjQ" target="_Pi570OJEEeynbpPsy0IgOA"/>
-          <transition xmi:type="uml:Transition" xmi:id="_aFuCUEASEe2uZrl0GowZ6w" name="0xXXXXXXXX" source="_1_tEgGv5Eey5KKgJPOVaLw" target="__kTnQGv5Eey5KKgJPOVaLw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_eMdYwEATEe2uZrl0GowZ6w" name="0xXXXXXXXX" source="_s1Ut0HaoEeyEbZM7_RezjQ" target="_C1R-AHapEeyEbZM7_RezjQ"/>
-          <transition xmi:type="uml:Transition" xmi:id="_we5OUEATEe2uZrl0GowZ6w" source="_Pi570OJEEeynbpPsy0IgOA" target="_S2u2oEATEe2uZrl0GowZ6w"/>
-          <transition xmi:type="uml:Transition" xmi:id="_99HG8EATEe2uZrl0GowZ6w" source="_C1R-AHapEeyEbZM7_RezjQ" target="_S2u2oEATEe2uZrl0GowZ6w"/>
-          <transition xmi:type="uml:Transition" xmi:id="__ZJnIEATEe2uZrl0GowZ6w" source="_S2u2oEATEe2uZrl0GowZ6w" target="_Oarn0FOfEeySD_ApfBmgRw"/>
-          <subvertex xmi:type="uml:State" xmi:id="_Oarn0FOfEeySD_ApfBmgRw" name="WaitingForMessage"/>
-          <subvertex xmi:type="uml:State" xmi:id="__afZYGv4Eey5KKgJPOVaLw" name="ReadSensor"/>
-          <subvertex xmi:type="uml:State" xmi:id="_F5QMkGv5Eey5KKgJPOVaLw" name="ReadIR"/>
-          <subvertex xmi:type="uml:State" xmi:id="_LrssUGv5Eey5KKgJPOVaLw" name="ReadUS"/>
-          <subvertex xmi:type="uml:State" xmi:id="_NhZpsGv5Eey5KKgJPOVaLw" name="ReadIMU"/>
-          <subvertex xmi:type="uml:State" xmi:id="_PrI9YGv5Eey5KKgJPOVaLw" name="ReadLIDAR"/>
-          <subvertex xmi:type="uml:State" xmi:id="_1_tEgGv5Eey5KKgJPOVaLw" name="SetXAxis"/>
-          <subvertex xmi:type="uml:State" xmi:id="__kTnQGv5Eey5KKgJPOVaLw" name="SetYAxis"/>
-          <subvertex xmi:type="uml:State" xmi:id="_6Xr78Gv6Eey5KKgJPOVaLw" name="SetCoordinates"/>
-          <subvertex xmi:type="uml:State" xmi:id="_I9FfEGv7Eey5KKgJPOVaLw" name="SetParameters"/>
-          <subvertex xmi:type="uml:State" xmi:id="_JkJfEGv7Eey5KKgJPOVaLw" name="SetAngularSpeed"/>
-          <subvertex xmi:type="uml:State" xmi:id="_J-6vgGv7Eey5KKgJPOVaLw" name="SetLinearSpeed"/>
-          <subvertex xmi:type="uml:State" xmi:id="_f66FsGv7Eey5KKgJPOVaLw" name="SetTime"/>
-          <subvertex xmi:type="uml:State" xmi:id="_rpuaMHakEeyEbZM7_RezjQ" name="setFeedback"/>
-          <subvertex xmi:type="uml:State" xmi:id="_AUFJYHalEeyEbZM7_RezjQ" name="readSensorID"/>
-          <subvertex xmi:type="uml:State" xmi:id="_FGPwgHaoEeyEbZM7_RezjQ" name="setCheckpointStatus"/>
-          <subvertex xmi:type="uml:State" xmi:id="_s1Ut0HaoEeyEbZM7_RezjQ" name="setXAxis"/>
-          <subvertex xmi:type="uml:State" xmi:id="_C1R-AHapEeyEbZM7_RezjQ" name="setYAxis"/>
-          <subvertex xmi:type="uml:State" xmi:id="_Pi570OJEEeynbpPsy0IgOA" name="readSensorStatus"/>
           <subvertex xmi:type="uml:State" xmi:id="_RGjScEATEe2uZrl0GowZ6w" name="CopyOf_readSensorStatus_49"/>
-          <subvertex xmi:type="uml:State" xmi:id="_S2u2oEATEe2uZrl0GowZ6w" name="establishFeedbackMessage"/>
         </region>
       </packagedElement>
       <packagedElement xmi:type="uml:StateMachine" xmi:id="_vyruUFOfEeySD_ApfBmgRw" name="StateMachine44">
@@ -616,4 +618,18 @@
   <Blocks:Block xmi:id="_T1m2ALtfEe2Nrs5y5qC-LA" base_Class="_T1e6MLtfEe2Nrs5y5qC-LA"/>
   <Blocks:Block xmi:id="_WNRQ8LtfEe2Nrs5y5qC-LA" base_Class="_WNONoLtfEe2Nrs5y5qC-LA"/>
   <Blocks:Block xmi:id="_bEuvILtfEe2Nrs5y5qC-LA" base_Class="_bEnaYLtfEe2Nrs5y5qC-LA"/>
+  <Blocks:Block xmi:id="_njgDsMV1Ee2WhI0ZcH7BkQ" base_Class="_njRaMMV1Ee2WhI0ZcH7BkQ"/>
+  <Blocks:Block xmi:id="_5hM_YMV1Ee2WhI0ZcH7BkQ" base_Class="_5hIt8MV1Ee2WhI0ZcH7BkQ"/>
+  <Blocks:Block xmi:id="_h-iJ0MV2Ee2WhI0ZcH7BkQ" base_Class="_h-fGgMV2Ee2WhI0ZcH7BkQ"/>
+  <Blocks:Block xmi:id="_TSNp4MV3Ee2WhI0ZcH7BkQ" base_Class="_TSKmkMV3Ee2WhI0ZcH7BkQ"/>
+  <Blocks:Block xmi:id="_H__5UMV4Ee2WhI0ZcH7BkQ" base_Class="_H_-EIMV4Ee2WhI0ZcH7BkQ"/>
+  <Blocks:Block xmi:id="_EBx60MV5Ee2WhI0ZcH7BkQ" base_Class="_EBvekMV5Ee2WhI0ZcH7BkQ"/>
+  <Blocks:Block xmi:id="_jGUw8MV5Ee2WhI0ZcH7BkQ" base_Class="_jGRtoMV5Ee2WhI0ZcH7BkQ"/>
+  <Blocks:NestedConnectorEnd xmi:id="_1wE6UMV5Ee2WhI0ZcH7BkQ" base_Element="_1wETQMV5Ee2WhI0ZcH7BkQ" propertyPath="_-IHYwMV4Ee2WhI0ZcH7BkQ" base_ConnectorEnd="_1wETQMV5Ee2WhI0ZcH7BkQ"/>
+  <Blocks:NestedConnectorEnd xmi:id="_1wFhYMV5Ee2WhI0ZcH7BkQ" base_Element="_1wETQcV5Ee2WhI0ZcH7BkQ" propertyPath="_ilhxAMV5Ee2WhI0ZcH7BkQ" base_ConnectorEnd="_1wETQcV5Ee2WhI0ZcH7BkQ"/>
+  <Blocks:NestedConnectorEnd xmi:id="_PfllcMV6Ee2WhI0ZcH7BkQ" base_Element="_Pfk-YcV6Ee2WhI0ZcH7BkQ" propertyPath="_-IHYwMV4Ee2WhI0ZcH7BkQ" base_ConnectorEnd="_Pfk-YcV6Ee2WhI0ZcH7BkQ"/>
+  <Blocks:Block xmi:id="_oYqX0MV6Ee2WhI0ZcH7BkQ" base_Class="_oYoioMV6Ee2WhI0ZcH7BkQ"/>
+  <Blocks:Block xmi:id="_SNeSkMV7Ee2WhI0ZcH7BkQ" base_Class="_SNcdYMV7Ee2WhI0ZcH7BkQ"/>
+  <Blocks:NestedConnectorEnd xmi:id="_xGTn8sV7Ee2WhI0ZcH7BkQ" base_Element="_xGTn8MV7Ee2WhI0ZcH7BkQ" propertyPath="_R7IlYMV7Ee2WhI0ZcH7BkQ" base_ConnectorEnd="_xGTn8MV7Ee2WhI0ZcH7BkQ"/>
+  <Blocks:NestedConnectorEnd xmi:id="_xGUPAMV7Ee2WhI0ZcH7BkQ" base_Element="_xGTn8cV7Ee2WhI0ZcH7BkQ" propertyPath="_tb0vsMV6Ee2WhI0ZcH7BkQ" base_ConnectorEnd="_xGTn8cV7Ee2WhI0ZcH7BkQ"/>
 </xmi:XMI>
